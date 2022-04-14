@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Расчет прочности при расятжении</title>
+</head>
+<body>
+    <h1 style="color:#6a5acd; font-family:verdana;">Расчет прочности при растяжении</h1>
+    <form action="" method="post">
+    <fieldset>
+        <legend>Введите параметры</legend>
+    <p>
+        <label for="mn">Введите Соотношение матрица-наполнитель, МПа</label>
+	    <input type="text" name="mn">
+    </p><p>
+	    <label for="plot">Введите Плотность, кг/м3</label>
+	    <input type="text" name="plot">
+    </p><p>
+	    <label for="mup">Введите Модуль упругости, ГПа</label>
+	    <input type="text" name="mup">
+    </p><p>
+	    <label for="ko">Введите Количество отвердителя, м.%</label>
+	    <input type="text" name="ko">
+    </p><p>
+        <label for="seg">Введите Содержание эпоксидных групп,%_2</label>
+	    <input type="text" name="seg">
+    </p><p>
+        <label for="tv">Введите Температура вспышки, С_2</label>
+	    <input type="text" name="tv">
+    </p><p>
+        <label for="pp">Введите Поверхностная плотность, г/м2</label>
+	    <input type="text" name="pp">
+    </p><p>
+        <label for="mup">Введите Модуль упругости при растяжении, ГПа</label>
+	    <input type="text" name="mup">
+    </p><p>
+        <label for="ps">Введите Потребление смолы, г/м2</label>
+	    <input type="text" name="ps">
+    </p><p>
+        <label for="yn">Введите Угол нашивки, град</label>
+	    <input type="text" name="yn">
+    </p><p>
+        <label for="shn">Введите Шаг нашивки</label>
+	    <input type="text" name="shn">
+    </p><p>
+        <label for="pln">Введите Плотность нашивки</label>
+	    <input type="text" name="pln">
+	</p>
+    </fieldset>
+	<p>
+	    <input type="submit" value="Рассчитать">
+        <input type="reset">
+	</p>
+    </form>
+    <p>
+    {% if message %}
+        <p><b>{{message}}</b></p>
+    {% endif %}
+    </p>
+    <p>
+        <a href="{{url_for('choose_prediction_method')}}">Вернуться на главную страницу</a>
+    </p>
+</body>
+</html>

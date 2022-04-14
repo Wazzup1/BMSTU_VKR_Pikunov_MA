@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Прогнозирование конечных свойств композиционных материалов</title>
+</head>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: sans-serif;
+    }
+    
+    /* Style the header */
+    header {
+      font-family: monospace;
+      background-color: #1b99bf;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+    
+    /* Create two columns/boxes that floats next to each other */
+    nav {
+      float: left;
+      width: 30%;
+      background: #87948d;
+      padding: 20px;
+    }
+    
+    /* Style the list inside the menu */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      background-color: #f1f1f1;
+      height: 300px; /* only for demonstration, should be removed */
+    }
+    
+    /* Clear floats after the columns */
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Style the footer */
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    
+    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+    </style>
+    </head>
+    <body>    
+    <header>
+      <h2>Прогнозирование конечных свойств композиционных материалов</h2>
+    </header>
+    
+    <section>
+      <nav>
+        <ul>
+          <li><a href="{{url_for('mn_predict')}}">
+            <button>Прогнозирование значения матрица-наполнитель</button>
+          </a></li>
+          <li><a href="{{url_for('pr_predict')}}">
+            <button>Прогнозирование прочности при растяжении</button>
+          </a></li>
+          <li><a href="{{url_for('upr_predict')}}">
+            <button>Прогнозирование модуля упругости при растяжении</button>
+          </a></li>
+        </ul>
+      </nav>
+      
+      <article>
+        <h1>Композиционные материалы</h1>
+        <p>Композиционные материалы — это искусственно созданные материалы, состоящие из нескольких других с четкой границей между ними.
+            Композиты обладают теми свойствами, которые не наблюдаются у компонентов по отдельности. 
+            При этом композиты являются монолитным материалом, т. е. компоненты материала неотделимы друг от друга без разрушения конструкции в целом. </p>
+        <p>В данном веб-приложении можно спрогнозировать с помощью обученных нейронных сетей
+             конечные свойства композиционных материалов, такие как
+            [<i>Матрица-наполнитель, Прочность при растяжении, Модуль упругости при растяжении</i>], на основе
+            введенных пользователем значений.
+        </p>
+      </article>
+    </section>
+    
+    <footer>
+      <p>Ссылка на мой GitHub: <a href="https://github.com/Wazzup1" target="_blank">GitHub</a></p>
+    </footer>
+</body>
+</html>
