@@ -137,3 +137,5 @@ flask_app/.idea/modules.xml
 flask_app/.idea/inspectionProfiles/profiles_settings.xml
 flask_app/.idea/.gitignore
 app.py
+X_bp.xlsx
+X_nup.xlsx
