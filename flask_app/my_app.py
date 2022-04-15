@@ -17,7 +17,7 @@ def mn_prediction(params):
     return pred
 
 def pr_prediction(params):
-    model = tf.keras.models.load_model('models/pr_model_381')
+    model = tf.keras.models.load_model('models/pr_model_375')
     pred = model.predict([params])
     return pred
 
@@ -58,7 +58,7 @@ def mn_predict():
         params = [plot, mup, ko, seg, tv, pp, mup, pr, ps, yn, shn, pln]
         params = [float(i) for i in params]
 
-        message = f'Спрогнозированное значение матрица-наполнитель для введенных параметров: {mn_prediction(params)}'
+        message = f'Спрогнозированное Соотношение матрица-наполнитель для введенных параметров: {mn_prediction(params)}'
     return render_template('mn.html', message=message)
 
 @app.route('/pr/', methods=['POST', 'GET'])
