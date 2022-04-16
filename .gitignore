@@ -139,3 +139,4 @@ flask_app/.idea/.gitignore
 app.py
 X_bp.xlsx
 X_nup.xlsx
+output.png
