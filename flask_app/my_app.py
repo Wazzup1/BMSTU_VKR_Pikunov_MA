@@ -22,7 +22,7 @@ def pr_prediction(params):
     return pred
 
 def upr_prediction(params):
-    model = tf.keras.models.load_model('models/upr_model_2.67')
+    model = tf.keras.models.load_model('models/upr_model_2.62')
     pred = model.predict([params])
     return pred
 
