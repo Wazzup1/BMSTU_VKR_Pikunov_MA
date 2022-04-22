@@ -38,7 +38,7 @@
 	    <input type="text" name="ps" required>
     </p><p>
         <label for="yn">Введите Угол нашивки, град</label>
-	    <input type="number" name="yn" min='0' max='360' step='1' required>
+	    <input type="number" name="yn" min='0' max='90' step='1' required>
     </p><p>
         <label for="shn">Введите Шаг нашивки</label>
 	    <input type="text" name="shn" required>
@@ -57,8 +57,10 @@
         <p><b>{{message}}</b></p>
     {% endif %}
     </p>
+</body>
+<footer>
     <p>
         <a href="{{url_for('choose_prediction_method')}}"><button>Вернуться на главную страницу</button></a>
     </p>
-</body>
+</footer>
 </html>
